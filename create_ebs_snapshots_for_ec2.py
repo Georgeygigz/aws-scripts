@@ -88,7 +88,7 @@ def deregister_custom_ami():
         if (custom_image['ImageId'] not in instance_ami_ids) and (custom_image['CreationDate'].partition('T')[0] in string_delete_date ):
             print('<<<<<Deregistering>>>>>>')
             ec2.deregister_image(ImageId=custom_image['ImageId'])
-            print('<<<<<Deregistering>>>>>>')
+            print('<<<<<Done>>>>>>')
 deregister_custom_ami()
 if __name__ == '__main__':
     delete_snapshots()
